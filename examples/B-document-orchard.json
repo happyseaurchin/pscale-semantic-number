@@ -1,0 +1,69 @@
+{
+  "decimal": 0,
+  "tree": {
+    "_": "On the Care of Orchards. A practical guide in three sections. This is a rendition block — a document that decomposes into sections, parts, and sub-parts. Pscale 0 is the document itself. Digit keys label sections; order aids reading but is not strict. X- enters a section, X~ shows sibling sections at the same level.",
+    "1": {
+      "_": "Soil and Site. Choosing and preparing the ground before any tree is planted.",
+      "1": {
+        "_": "Reading the soil. How to judge what the earth will support.",
+        "1": "Squeeze a handful of damp soil. If it holds its shape and ribbons when pressed, it is clay-heavy. If it crumbles, sand dominates. The best orchard soil does both — holds moisture but drains freely.",
+        "2": "Look at what already grows. Nettles mean nitrogen. Dock means compacted ground. Clover means the soil is poor but fixable. The weeds are a survey you did not have to commission.",
+        "3": "Test the pH with a simple kit from any garden supplier. Most fruit trees want 6.0 to 6.8. Below that, add lime in autumn. Above that, add sulphur. Small corrections over years, never all at once."
+      },
+      "2": {
+        "_": "Choosing the site. Aspect, shelter, and drainage.",
+        "1": "A south-facing slope is ideal in northern climates. The angle catches low winter sun and sheds frost downhill. Avoid frost pockets — low ground where cold air pools on still nights.",
+        "2": "Windbreaks matter more than most people realise. A hedge on the windward side, permeable not solid, reduces wind speed for a distance of ten times its height. Solid walls create turbulence.",
+        "3": "Drainage can be tested by digging a hole one foot deep and filling it with water. If it drains within four hours, the site is suitable. If water stands overnight, consider raised beds or a different location."
+      },
+      "3": {
+        "_": "Preparing the ground. What to do in the season before planting.",
+        "1": "Clear perennial weeds completely. Bindweed and couch grass will compete with young trees for years if left. Dig them out or smother with black plastic for a full growing season.",
+        "2": "Incorporate organic matter — well-rotted manure or compost — to a spade's depth. This is the last chance to improve the deep soil structure before roots occupy it.",
+        "3": "Mark out tree positions with stakes. Standard trees need thirty feet apart. Semi-dwarf need fifteen. Dwarf rootstocks can manage at eight. Crowding is the commonest mistake in young orchards."
+      }
+    },
+    "2": {
+      "_": "Planting and Establishment. The first three years, when habits are formed.",
+      "1": {
+        "_": "Planting technique. Getting the tree into the ground correctly.",
+        "1": "Dig the hole twice the width of the root ball but no deeper. The graft union must sit above soil level — burying it defeats the purpose of the rootstock and produces an ungovernable tree.",
+        "2": "Spread the roots outward, not circling. If pot-bound roots are left spiralling, they will girdle the trunk in ten years and strangle the tree they support.",
+        "3": "Water deeply at planting — two full buckets minimum. This settles the soil around the roots and eliminates air pockets. Then mulch to a hand's depth, keeping mulch away from the trunk."
+      },
+      "2": {
+        "_": "First-year care. Establishing the root system.",
+        "1": "Water weekly through the first summer if rain does not fall. A young tree with a limited root system cannot search for moisture the way an established tree can.",
+        "2": "Remove all fruit in the first year, even if it pains you. The tree's energy must go to roots and framework, not to ripening fruit it cannot yet support.",
+        "3": "Check stakes and ties monthly. A tie that bites into bark as the trunk expands will kill the tree above the constriction. Adjust or replace before damage is done."
+      },
+      "3": {
+        "_": "Formative pruning. Shaping the tree in years two and three.",
+        "1": "Choose three to five well-spaced branches as the main framework. Remove competing leaders and inward-crossing growth. The goal is an open goblet shape that admits light and air.",
+        "2": "Prune in late winter for apples and pears, after harvest for stone fruit. Winter pruning stimulates growth. Summer pruning restrains it. Time your cuts to the response you want.",
+        "3": "Every cut is a decision about the tree's future shape. Cut to an outward-facing bud. The bud you leave will become the branch direction. Visualise the tree in three years before making the cut."
+      }
+    },
+    "3": {
+      "_": "Harvest and Renewal. The mature orchard and its long-term care.",
+      "1": {
+        "_": "Knowing when to pick. Ripeness is a judgment, not a date.",
+        "1": "Lift the fruit gently and twist. If it parts from the spur with the stalk attached, it is ready. If you have to tug, wait. If it falls when you touch the branch, you are late.",
+        "2": "Colour is unreliable for some varieties. A Bramley stays green when ripe. A Cox turns red weeks before it is ready. Taste one from the sunny side of the tree — that is your test.",
+        "3": "Pick in the morning after dew has dried. Fruit picked cool stores better. Handle every fruit as if it will bruise — because it will, and bruised fruit rots first in storage."
+      },
+      "2": {
+        "_": "Storage and preservation. Keeping the harvest through winter.",
+        "1": "Store only perfect fruit. One rotten apple in a box will spoil its neighbours within a week. Sort ruthlessly. Damaged fruit goes to the press or the kitchen, not to storage.",
+        "2": "A cool, dark, frost-free room with some air movement is ideal. Wrap late-keeping varieties individually in newspaper. Check monthly and remove any that show soft spots.",
+        "3": "For surplus beyond eating and storage: juice, cider, dried rings, or preserves. Every method has a season. Cider wants October. Dried rings want the last warmth of September."
+      },
+      "3": {
+        "_": "Renewal pruning. Keeping an old orchard productive.",
+        "1": "A neglected tree can be restored but not in one season. Remove no more than a third of the canopy in any year. Drastic cuts produce water sprouts — vigorous, unfruitful vertical shoots.",
+        "2": "Identify dead wood, crossing branches, and dense thickets in the centre. Remove these first. Often this alone is enough to restore light and air without touching healthy wood.",
+        "3": "A very old tree with a hollow trunk is not necessarily dying. The living wood is at the outside. Prop sagging limbs rather than removing them. Some of the best-fruiting trees in England are centuries old."
+      }
+    }
+  }
+}

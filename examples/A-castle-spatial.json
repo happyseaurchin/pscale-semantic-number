@@ -1,0 +1,69 @@
+{
+  "decimal": 0,
+  "tree": {
+    "_": "Castle Blackmere. A spatial block mapping the castle and its grounds. This is a rendition block — containment mapping with labeling digits. Pscale 0 is the estate itself. X+ zooms out (room to building), X- zooms in (building to room), X~ shows adjacent spaces at the same scale. Three levels: areas of the castle (keep, stables, garrison), rooms within each area, and features within each room.",
+    "1": {
+      "_": "The Keep. The fortified central tower, heart of the castle. Three storeys of thick limestone, the oldest structure on the site.",
+      "1": {
+        "_": "The Kitchen. A large vaulted room on the ground floor, warm and busy from dawn to midnight.",
+        "1": "The great fireplace, wide enough for a roasting spit and iron cauldron. The hearthstone is blackened smooth from two centuries of use.",
+        "2": "The main worktable, scarred oak, where bread is kneaded and meat is dressed. Knife marks layer the surface like a palimpsest.",
+        "3": "The pantry, a cool alcove behind a heavy door, shelves lined with crocks of preserves, salted fish, and hard cheese."
+      },
+      "2": {
+        "_": "The Great Hall. The largest room in the keep, where the lord holds court and the household eats together.",
+        "1": "The high table on the raised dais, where the lord and honoured guests sit. A carved oak chair marks the lord's place.",
+        "2": "The central hearth, a stone-ringed firepit with an iron chandelier suspended above it by a chain from the rafters.",
+        "3": "The minstrel gallery, a narrow balcony overlooking the hall from the east wall. Reached by a door from the upper passage."
+      },
+      "3": {
+        "_": "The Lord's Private Quarters. Upper floor of the keep, accessible only by a spiral stair with a locked door at each landing.",
+        "1": "The canopied bed, heavy curtains drawn against the drafts. A warming pan hangs on the wall beside it.",
+        "2": "The writing desk by the narrow window, where letters and accounts are kept. Ink, quill, and seal always at hand.",
+        "3": "The strongbox, iron-banded oak, bolted to the floor beneath a loose board. Only the lord and steward know the key."
+      }
+    },
+    "2": {
+      "_": "The Stables. A long timber building along the inner curtain wall, smelling of hay and horse and leather.",
+      "1": {
+        "_": "The main stalls. Eight bays for warhorses and palfreys, each divided by stout oak partitions.",
+        "1": "The hay rack above each stall, replenished daily from the loft by the stable boy before first light.",
+        "2": "The water trough at the end of the row, fed by a stone channel from the courtyard well.",
+        "3": "The tack hooks between each pair of stalls, where bridles and saddles hang between rides."
+      },
+      "2": {
+        "_": "The farrier's corner. A covered area at the south end with anvil, forge, and tools of the trade.",
+        "1": "The anvil, a heavy iron block set on an elm stump. The ring of hammer on iron carries across the yard.",
+        "2": "The quenching bucket, water blackened with scale that hisses when hot iron meets it.",
+        "3": "The hoof-knife rack, blades arranged by size on a leather strap nailed to the post."
+      },
+      "3": {
+        "_": "The hayloft. The upper storey, accessed by a ladder at the north end. Warm, dusty, and quiet.",
+        "1": "The hay door, a wide opening in the gable wall for hauling bales up from the cart below.",
+        "2": "The sleeping nook, where the stable boy beds down in a hollow among the straw bales.",
+        "3": "The cat's nest, a warm hollow near the chimney breast where the mouser raises her kittens each spring."
+      }
+    },
+    "3": {
+      "_": "The Garrison. A stone building at the east wall housing the castle guard, their arms, and their training ground.",
+      "1": {
+        "_": "The barracks. A long room with rows of cots along both walls and a stove at the centre.",
+        "1": "The weapon rack by the door, pikes and swords standing ready for muster at a moment's call.",
+        "2": "The stove, a cast-iron cylinder that heats the room in winter and dries wet cloaks hung around it.",
+        "3": "The kit shelves along the back wall, each soldier's belongings in a numbered wooden cubby."
+      },
+      "2": {
+        "_": "The armoury. A locked room at the end of the barracks, key held by the sergeant-at-arms.",
+        "1": "The mail hauberks, hung on wooden frames along the back wall, oiled monthly against rust.",
+        "2": "The crossbow case, oiled bolts counted weekly by the sergeant and noted in the garrison ledger.",
+        "3": "The helmet shelf, bascinets and kettle hats in rows, each marked with its owner's tally."
+      },
+      "3": {
+        "_": "The drill yard. A packed-earth square behind the garrison building, worn bare by daily practice.",
+        "1": "The pell, a battered wooden post wrapped in rope, used for sword and mace practice.",
+        "2": "The archery butts at the far end, straw targets replaced each month when they fall apart.",
+        "3": "The well, shared with the stables, covered by a heavy wooden lid to keep the water clean."
+      }
+    }
+  }
+}
