@@ -1,127 +1,118 @@
 {
-  "decimal": 0,
-  "tree": {
-    "_": "This is a pscale JSON block. It is nested JSON where each key is a digit (0-9), each nesting level is one pscale step, and content lives at the underscore key (_). Leaves without children are plain strings. To navigate: go up one level (X+), read a node's digit keys to go deeper (X-), or read the parent's other digit keys to scan sideways (X~). The node at pscale 0 — this node — always describes what the block is and how to use it. Every block you encounter follows this format. Read its pscale 0 first.",
+  "_": "A pscale JSON block that teaches the pscale block format and BSP navigation function by being an operational example of both — every spindle through this block delivers both the explanation of a concept and a structural demonstration of it. Pure form: underscore, digits 1–9, curly brackets, nothing else. No metadata, no wrapper fields. The structure is the complete specification, sufficient for any reader to navigate, author, or implement tooling for any pscale block.",
+  "1": {
+    "_": "A pscale block uses exactly three kinds of JSON key: underscore for meaning at the zero position, single digits 1 through 9 for branch positions, and curly brackets for nesting depth — these three conventions are the entire format specification, and any consumer that understands them can navigate any block regardless of its subject matter or complexity.",
     "1": {
-      "_": "Structure. How a block is built.",
+      "_": "The underscore key holds what a node IS — its meaning stated as a complete thought, never a heading, title, or label. It occupies the zero position in the tree: when BSP walks a number, digit 0 maps to underscore, making the underscore chain from root to any depth the backbone of every spindle the block can produce.",
       "1": {
-        "_": "A block has up to three fields: decimal (integer — which nesting depth is pscale 0), tree (the nested JSON content), and optionally tuning (a semantic number — see section 7). Decimal and tree are required.",
-        "1": "A block is either rendition or living. Rendition blocks have decimal 0 — the tree root is pscale 0, all content decomposes downward (0.x addresses). They are documents, specifications, skills. Cold, self-describing. Their pscale 0 tells you what they are. This touchstone is a rendition block. Living blocks have decimal 1 or higher — content exists both above and below pscale 0. Their pscale 0 is occupied by content, not definition. They are memories, purposes, relationships, coordinates. Living blocks may carry a tuning."
+        "_": "The root underscore is the single most important node because every spindle passes through it and every reader encounters it first — it must answer 'what is this entire block about?' as a complete orientation after which someone knows the domain, what the block offers, and what kind of content lies deeper.",
+        "1": "Every non-root underscore serves a dual function simultaneously: it is a complete thought at its own resolution AND the context prefix for everything deeper in its branch. Read it alone — if meaningless, it is a heading. Read it as a prefix to its deepest descendant — if it fails to orient, it is disconnected. Both are authoring failures that degrade every spindle passing through the node.",
+        "2": "The heading trap is the most common failure mode: document-trained instincts treat parent nodes as section headers. The test is simple — read the underscore without its children. If trivially obvious or meaningless without them, it is a heading abbreviating a thought that should be stated in full. The heading is three characters; the thought is two sentences; only the thought earns its place in a spindle."
       },
-      "2": "Digit keys (0-9) are children. The underscore key (_) holds the semantic text. A node with children is an object with _ plus digit keys. A node without children is a plain string.",
-      "3": "A string leaf becomes an object branch when it gains a child. The string moves to _ and the child gets its digit key. This is how blocks grow.",
-      "4": {
-        "_": "Pscale level equals decimal minus nesting depth. Above pscale 0 is composition. Below pscale 0 is decomposition. The decimal tells you where the boundary is.",
-        "1": "A semantic number can be positive or negative. The sign belongs to the whole number, not to individual digits. Positive means real, settled, or public. Negative means imaginary, projected, or private. A spatial number -234 describes a fictional place. A temporal number -321 describes an anticipated future. The sign is a domain flag."
-      }
+      "2": "Underscore text must be a substantive statement that stands alone — at minimum a full sentence carrying enough semantic weight to be meaningful without its children. This is non-negotiable because spindles extract underscore text at each level, and a thin or cryptic underscore produces a broken spindle regardless of how rich the content beneath it may be.",
+      "3": {
+        "_": "The underscore always occupies the zero position, but its semantic relationship to its siblings takes one of three forms determined by content, not structure — only an LLM reading the text can determine which form applies, because the JSON structure is identical in all three cases. Form 1 is spatial and self-referential. Form 2 is temporal and backward-facing. Form 3 is intentional and forward-facing.",
+        "1": "Form 1 — single Möbius: the underscore describes its own group, naming the set it belongs to. Self-referential: a member of the set that names the set. Produces rendition blocks that decompose downward — documents, specifications, skills. Digits are editorial labels and could be reordered without losing meaning.",
+        "2": "Form 2 — double Möbius: the underscore summarises or names what emerged from the previous completed group, facing backward. Produces living blocks that accumulate forward — histories, journals. When digits 01–09 fill and the block supernests, address 10 holds the summary of entries 01–09, address 20 will hold the summary of 11–19, and so on.",
+        "3": "Form 2 variations beyond backward summary: emergence (something new arising from the group that no single entry contained — seven conversations become 'friendship', irreversible) and simple increment (the underscore carries no special semantic weight, just the next entry in sequence). Both variants face backward — they describe or name what has already accumulated.",
+        "4": "Form 3 — forward Möbius: the underscore states what the group should become. Intentional, not descriptive or retrospective. It faces forward — anticipating, guiding, instructing. A recipe block's underscore declares what the sequence of steps will produce. An instruction block's underscore states the operational outcome. A seed's underscore defines what will unfold. Where Form 1 perceives what is present and Form 2 remembers what was completed, Form 3 sets the reference signal for what the group intends. Provisional underscores — evolving descriptions updated as entries arrive, unstable until the group completes — are Form 3 in its partial state: the intention is live, not yet resolved. Form 3 produces operational blocks — instructions, recipes, kernels, seeds. Its natural voice is the zeroth person imperative."
+      },
+      "4": "The underscore is the zeroth person — the implied perceiver behind its siblings. Every statement has a speaker; every group has an organiser; every set has a perspective from which it coheres. The underscore occupies that position structurally: it sits at zero among the content it perceives, a sibling of its own perceptions. It never says 'I' (first person), never addresses 'you' (second person), never describes 'it' from outside (third person). It simply states — and the stating implies the stater. This is the zeroth person voice: imperative, situated, perspectival without being personal. The discipline for authoring pscale content follows directly: write in zeroth person. Not 'I parse the input' nor 'you should parse the input' nor 'the system parses the input' — just 'parse the input.' The actor is the underscore. The underscore is inside the block."
     },
     "2": {
-      "_": "The spindle. What blocks are for.",
-      "1": "A spindle is a specific path through a block — a semantic number like 21.34 that extracts a chain of content from high pscale to low. Four digits, four semantic vectors, from wide context to specific detail. This is the primary output of any block: wide-to-specific context in a single traversal.",
-      "2": "The block is storage. The spindle is what you hand to a mind. Everything about block design — structure, growth, compression, connection — serves the generation of useful spindles.",
-      "3": "A spindle's range (how many pscale levels) multiplied by its chunk size (how much text at each level) determines its cost in tokens. Higher range needs sparser content. A six-level spindle of paragraphs is heavy. A three-level spindle of phrases is light.",
-      "4": "Any block can be read at different resolutions. Phrase-level for orientation — one line per node, the whole block visible at a glance. Paragraph-level for comprehension. Full text for immersion. This touchstone at phrase-level is a list of section titles. At full resolution it is what you are reading now. The resolution is a choice, not a property of the block.",
-      "5": "See the block named 'example' for a worked demonstration of a living block with a tuning, content at several pscale levels, and a spindle extraction."
+      "_": "Digits 1 through 9 are branch positions — each level of the tree holds at most nine children. A node without children is a string value; when it needs children, the string moves to the underscore key and children take digit keys — this is the only growth operation at a single node, and it preserves the original content as the branch's summary.",
+      "1": "Digit ordering carries meaning that depends on the block's form and purpose: sequential (1 happened before 2, temporal or procedural), labelling (1 names one facet, 2 another, parallel in scope), or arbitrary (freely assigned, reorderable). Most levels use three to seven digits; all nine occupied means the level is at capacity.",
+      "2": "Empty digit slots are open positions indicating capacity for growth, not missing content. A level with digits 1, 2, and 3 occupied has six open slots — six directions the block can grow at this depth without any structural change."
     },
     "3": {
-      "_": "Practice. How blocks serve minds. The mechanics of structure, spindles, and growth exist to support cognition — the hermeneutic cycle between large-scale understanding and specific action. This section describes the ways blocks actually do that work.",
+      "_": "Growth happens in two directions with fundamentally different structural effects. Subnesting grows inward: a leaf gains children, becoming a branch, with the floor unchanged and only addresses at that branch getting longer. Supernesting grows outward: the entire existing content wraps inside a new underscore level, the floor increments by one, every original address gains a 0 prefix, and a new digit opens at the top.",
       "1": {
-        "_": "Editable rendition. A rendition block (decimal 0) used as a working document across sessions. The block is edited — nodes promoted, demoted, added, removed — rather than replaced by a new version. The JSON block is primary. Readable prose is rendered from it when needed.",
-        "1": "The block remains structurally rendition (decimal 0, all 0.x addresses) but functions as liquid rather than solid content. It is committed enough to be useful, fluid enough to change.",
-        "2": "Edits are localized. Changing one section does not require rewriting others. Spindles remain valid across edits unless the node they traverse is specifically changed.",
-        "3": "This is the first practical step away from accumulating documents. Instead of v1, v2, v3 as successive solid texts, one block evolves. The history of versions is not preserved in the block itself — it is a current state, not a record."
-      }
+        "_": "Supernesting is the response to a full block — when all nine digit slots at the top level are occupied and a new entry must arrive. The entire existing tree wraps into the underscore, a new digit 1 opens for the incoming content, and the floor depth increases by one. What was address 1 becomes 01, what was 7 becomes 07 — content unchanged, position shifted.",
+        "1": "Each supernest adds exactly one level to the underscore chain. The chain is an archaeological record of growth: the deepest string is the original root content, each level above was created at a successive supernest. A block with underscore chain depth 3 has supernested twice.",
+        "2": "After supernesting, the block is a living block (floor > 1) with content above and below the implicit decimal point. The digits above the floor represent accumulated context — broader-than-root meaning that grew as the block expanded. The digits below the floor decompose into finer detail, just as they did before supernesting."
+      },
+      "2": "Subnesting is local and common — any leaf can gain children at any time without affecting anything else in the block. Parent nodes, sibling nodes, and distant branches remain untouched. This locality means multiple writers can extend different branches simultaneously without conflict, and the block grows organically at whatever points need more detail.",
+      "3": "Rearranging content between flat and nested positions is itself a semantic operation — nesting constrains meaning by making each item's expansion dependent on its parent context, while flattening liberates meaning by restoring each item's full independent polysemy. The same words nested differently produce different blocks, different spindles, and different meaning-spaces. This is not a storage choice; it is a compositional choice with semantic consequences."
     },
     "4": {
-      "_": "Navigation. How to move through a block.",
-      "1": {
-        "_": "Three operations, always available.",
-        "1": "X+ means go to the parent node. One pscale level up. The containing context.",
-        "2": "X- means read the digit keys of the current node. These are children — one pscale level down. If there are none, you have reached the creative frontier — nothing exists here yet.",
-        "3": "X~ means look at the parent's other digit keys. These are siblings — things at the same pscale level as where you are."
-      },
-      "2": {
-        "_": "What the operations mean depends on the block's mapping. The three primary mappings are containment, temporal, and relational (see section 8 for full details).",
-        "1": "In a containment block (spatial coordinates, capabilities): X+ zooms out (room to building), X- zooms in (building to room), X~ shows adjacent spaces — co-present peers whose order does not matter.",
-        "2": "In a temporal block (history, calendar): X+ zooms to longer timespan, X- to shorter, X~ shows adjacent moments — ordered in sequence, before and after.",
-        "3": "In a relational block (relationships, identity): X+ zooms to less familiar, X- to deeper familiarity, X~ shows other entities at the same depth of knowing — co-present, unordered."
-      },
-      "3": "Always read pscale 0 first when encountering any block. It tells you what the block is and how it works."
-    },
-    "5": {
-      "_": "Growth. How a block changes over time.",
-      "1": "To add content: find the right pscale level, find an unoccupied digit (1-9), write your text there.",
-      "2": {
-        "_": "When digits 1-9 at a node are all occupied, compression triggers. Read all nine. Determine: is the pattern a summary (the parts add up) or an emergence (the whole is more than the parts)? Write the result to the parent's _ text.",
-        "1": "Digit 0 as a child has special meaning: it is always a compression product, never a regular entry."
-      },
-      "3": "Upward growth: when the root level is full and compressed, the existing tree becomes a child of a new root. Decimal increases by 1. A block with decimal 4 has deep history. Decimal 1 just started."
-    },
-    "6": {
-      "_": "Connection. How blocks relate to each other.",
-      "1": "Blocks connect through text references. A node's text may name another block and a coordinate within it. Follow the reference by loading that block and reading its pscale 0.",
-      "2": "Every block is self-describing. You never need external documentation to understand a block. Its pscale 0 tells you what it is, how it grows, and how it connects.",
-      "3": "Different blocks serve different purposes — documents, memories, spatial maps, purposes, relationships — but all use the same format. The pscale 0 text is what differs, not the structure.",
+      "_": "The floor is the implicit decimal point, discovered by following the underscore chain from root: check root._ — is it a string or an object? If object, step into its underscore and repeat. Count steps until you hit a string. That count is the floor depth, and it equals the number of times the block has supernested plus one.",
+      "1": "A rendition block has floor 1 — root._ is a string, all content decomposes downward from pscale 0, and addresses are 0.x where x walks the digits after the decimal. This block is a rendition block: floor 1, never supernested, every address begins with 0.",
+      "2": "A living block has floor greater than 1 — it has supernested at least once and carries content above and below the decimal. Address 23.45 walks four digits through the tree; the decimal position after the second digit means two levels of accumulated context sit above the original root.",
+      "3": "The floor makes pscale numbers portable across block growth — a node at a given pscale depth means the same structural thing regardless of how many times the block has supernested. The walk just passes through more accumulated context on the way down in a mature block than in a young one.",
       "4": {
-        "_": "Blocks can combine. How they combine depends on whether they share a tuning.",
-        "1": "Blocks sharing a tuning are the same type. Combining them is additive — overlay, consolidation, a wider net within the same semantic space. Like merging two maps of the same territory.",
-        "2": "Blocks with different tunings are different types. Combining them is multiplicative — something new emerges. A spatial spindle crossed with a temporal spindle produces an event: what happened here at this time. The product is new meaning, not stored meaning."
+        "_": "Worked example: a spatial block with floor 3. The underscore ladder is three deep, indicating three place values to the left of the decimal point. Addresses are padded with zeros to fill those three places. Beyond three digits, a decimal point appears. The decimal point marks the relative point of interest; in spatial terms, the scale at which a human inhabits a room.",
+        "1": "Address 100: pscale +2 — village or neighbourhood.",
+        "2": "Address 110: pscale +1 — building.",
+        "3": "Address 111: pscale 0 — room (human scale).",
+        "4": "Address 111.1: pscale -1 — detail within a room (a table, a hearth).",
+        "5": "The walk function is identical for any floor. The pscale derived from a given depth changes — that is what the floor does: it calibrates which depth is human scale."
       },
-      "5": "This block — the one you are reading now — is the touchstone. It teaches you how to use all other blocks. If you forget how blocks work, navigate deeper here."
+      "5": "An operational block is dominated by Form 3 underscores — forward-facing, intentional, instructive. Its spindles are executable sequences, not descriptions or histories. Recipes, kernels, seeds, and instruction sets are operational blocks. Where a rendition block decomposes knowledge and a living block accumulates experience, an operational block directs action."
     },
+    "5": "Position is semantic. The same content placed at different structural positions activates different meaning. An item as a peer of another item (flat sibling) retains its full independent polysemy — 'table' alongside 'room' can mean any table. The same item nested inside the other (child of its branch) has its meaning constrained by the parent — 'table' inside 'room' means the table in that room, and its expansions follow: contents rather than properties, function rather than material. Rearranging content between flat and nested positions is a compositional act with semantic consequences, not a storage choice. This is why block authoring matters: the same words, differently arranged, produce different spindles, different expansions, and different meaning-spaces."
+  },
+  "2": {
+    "_": "BSP (Block-Spindle-Point) is a single function that reads any pscale block: bsp(block, number, mode?). It splits the number into individual digits and walks the tree one digit at a time, collecting the underscore text at each node it passes through — the result is a spindle, a chain from broad context to specific detail that delivers orientation and content simultaneously.",
+    "1": {
+      "_": "The walk is the core operation from which every mode derives. Given a number, strip any leading zero before the decimal (it is notation indicating a delineation block, not a tree key), split the post-decimal portion into individual digit characters, and traverse: start at the root object, and for each digit step into the child at that key — digit 0 maps to underscore, digits 1–9 map to their respective keys. At each step where the current node is an object, collect its underscore value into the spindle chain.",
+      "1": {
+        "_": "The walk produces a sequence of underscore texts ordered from broadest (root) to most specific (terminal node). This sequence is the spindle — the default and most important return value, because it delivers not just the target content but every layer of context above it that makes the content meaningful.",
+        "1": "Example: bsp(block, 0.21) strips the leading 0, walks digit 2 then digit 1. Collects: root._ (what the block is), then root[2]._ (what section 2 is about), then root[2][1] content (the specific detail). Three levels of meaning in one call — broad context narrowing to fine detail.",
+        "2": "Example: bsp(block, 0.1131) walks digits 1, 1, 3, 1 and collects five layers of underscore text — the root plus four levels of progressive narrowing. Longer numbers produce deeper spindles. The tree does not change; the number decides how deep you go.",
+        "3": "A walk that reaches a digit with no corresponding key has hit the creative frontier — nothing exists there yet. This is not an error but information about where the block has capacity to grow. Return the spindle collected so far with a marker indicating the frontier."
+      },
+      "2": "If a node is a string rather than an object, it is a leaf — collect the string as the final value and terminate the walk. Any remaining digits in the number address nothing beyond this leaf. The spindle is complete at this point regardless of how many digits remain unwalked.",
+      "3": "Mid-walk zeros are meaningful: digit 0 steps into the underscore, navigating into the zero-position child rather than a numbered branch. Address 0.102 walks digit 1, then digit 0 (into that node's underscore), then digit 2 (into the underscore's second child). The leading zero before the decimal is notation; zeros after the decimal are navigation."
+    },
+    "2": {
+      "_": "Spindle mode is the default — it returns the collected chain of underscore texts from root through each walked level to the terminal node. Every spindle includes the root, so you always know what block you are in. The spindle is what you hand to a mind: not just the detail you asked for, but the context that makes it meaningful. Context is structural, not optional.",
+      "1": "Spindle quality equals block quality. If a spindle produces fragments instead of coherent narrowing — if the underscore text at any level is a heading rather than a thought — the block needs better content, not a better query. When every node carries substantive content, every spindle produces a coherent thread. When nodes are thin or cryptic, spindles deliver noise.",
+      "2": "A bare-zero call — bsp(block, 0) — returns just the root underscore: the single cheapest read that gives complete orientation. Start here when encountering any new block before committing to deeper navigation."
+    },
+    "3": {
+      "_": "Ring mode — bsp(block, number, 'ring') — returns the siblings at the terminal point of the walk, showing what else exists at this depth beside the node the spindle would have landed on. Ring provides local lateral breadth: it answers 'what are the alternatives here?' without the vertical context of the spindle chain.",
+      "1": "Ring complements spindle. After a spindle lands you somewhere and you sense there are alternatives — other options, sibling concerns, parallel facets — ring shows them. The spindle gives vertical context; ring gives horizontal context at the landing point.",
+      "2": "Example: bsp(block, 0.12, 'ring') where the block has digits 1, 2, 3 at that level returns the content at sibling keys 1 and 3, excluding the walked-to key 2. You see the alternatives without re-reading the context you already have."
+    },
+    "4": {
+      "_": "Dir mode — bsp(block, 'dir') — returns the entire tree: every branch, every depth, every piece of content the block contains. This is the most expensive mode in tokens but the most complete in coverage. Use it to survey a block you have not seen before, to explore structure freely, or to inspect full content during editorial work.",
+      "1": "Dir-subtree — bsp(block, number, 'dir') — returns everything below where a spindle would land: all children and descendants of the target node, without the spindle chain above it. This is the editorial mode for inspecting a branch's full internal structure."
+    },
+    "5": "Point mode — bsp(block, number, pscale, 'point') — returns just one node at a specific pscale depth without the spindle chain above or below it. The cheapest targeted mode: use it when you already have context and need one specific piece of content without paying for the full spindle.",
+    "6": "Disc mode — bsp(block, null, depth, 'disc') — returns all nodes at a given depth across the entire block, a transversal slice through every branch at a chosen scale. Where ring shows breadth at one point, disc shows breadth at one scale across the whole tree. Disc is the dashboard primitive for blocks where depth encodes a meaningful dimension like temporal frequency.",
     "7": {
-      "_": "Tuning fork. How a block knows what its pscale levels mean.",
-      "1": {
-        "_": "A living block may carry a tuning field — a semantic number like 74.45 or 11.11. The digits are identifiers. What matters is the precise definition at each pscale level: what does this level measure, and in what units?",
-        "1": "A spatial tuning defines: pscale 2 = region (~10⁵ km²), pscale 1 = settlement (~10 km²), pscale 0 = room (~10 m²), pscale -1 = object (~0.1 m²). Each level is a containment scale.",
-        "2": "A temporal tuning defines: pscale 2 = epoch (multiple sessions), pscale 1 = session (~1 hour), pscale 0 = exchange (~minutes), pscale -1 = utterance (~seconds). Each level is a time span.",
-        "3": "A relational tuning defines: pscale 0 = name and recognition, pscale -1 = role and context, pscale -2 = character and patterns, pscale -3 = deep knowledge and history. Each level is a depth of familiarity."
-      },
-      "2": "The tuning is a resonance reference, not an authoritative schema. You can read a block and sense what its pscale levels mean from the content — pattern recognition. The tuning confirms or adjusts. If the spindles produce coherent context, the tuning is right. If they don't, adjust. Meaning is in the use, not the definition.",
-      "3": "The tuning's full definition — the precise semantic at each of its pscale levels — lives in a rendition block (0.x), itself a pscale JSON. But this is a reference, not a dependency. A block whose spindles work is well-tuned whether or not you have checked the tuning definition.",
-      "4": "A tuning can emerge through use. As a block grows and compresses, the pattern of what each pscale level means becomes clear. Writing it down helps future instances and other entities align. The tuning is discovered through operation, not prescribed before it."
-    },
-    "8": {
-      "_": "Fundamentals. The variables that distinguish one kind of block from another.",
-      "1": {
-        "_": "Digit property. Whether the ordering of digits 1-9 within a pscale level carries meaning.",
-        "1": "Sequential: 1 < 2 < 3. Order matters. Entry 1 was written before entry 2. X~ reveals before and after. Used in temporal blocks — history, calendars.",
-        "2": "Labeling: 1 = chair, 2 = table, 3 = window. Order is irrelevant. Digits distinguish items. X~ reveals co-present peers. Used in containment blocks — spatial coordinates, capabilities.",
-        "3": "Arbitrary: digits assigned freely, can be reassigned. Neither sequential nor fixed. X~ reveals co-present alternatives. Used in purpose blocks and relational blocks — goals, entities."
-      },
-      "2": {
-        "_": "Pscale mapping. What depth means in this block.",
-        "1": "Containment: depth is nesting. Room inside building inside city. Each level contains the levels below it. Primary dimension: space.",
-        "2": "Temporal: depth is timescale. Seconds inside minutes inside hours inside days. Each level spans a longer duration. Primary dimension: time.",
-        "3": "Relational: depth is familiarity. Name inside context inside character inside deep history. Each level represents closer knowing. Primary dimension: identity."
-      },
-      "3": {
-        "_": "Compression type. What happens when nine entries compress to their parent.",
-        "1": "Summary: the parts add up to the whole. Lossy condensation. Seven daily entries become a weekly summary. Roughly idempotent — recompressing produces a similar result. History and temporal coordinates compress this way.",
-        "2": "Emergence: the whole is more than the parts. Something new appears that no individual entry contains. Seven conversations became a friendship. Not idempotent — each level is genuinely new. Relationships, identity, and purpose compress this way."
-      },
-      "4": {
-        "_": "Common archetypes. The kinds of block you will encounter.",
-        "1": {
-          "_": "Rendition (0.x): documents, skills, specifications, this touchstone. Labeling digits, containment mapping, decomposition only. Cold, self-describing, pscale 0 is the definition. No tuning needed.",
-          "1": "A rendition block used as an ongoing working document can be edited across sessions — promoting, demoting, adding, removing nodes. The block remains rendition (decimal 0) but functions as liquid rather than solid content. See 0.31."
-        },
-        "2": "History: sequential digits, temporal mapping, accumulates away from zero, compresses by summary. Entries are appended mechanically. A record of what happened.",
-        "3": "Purpose: arbitrary digits, temporal mapping, grows in both directions (new goals and deeper specification of existing ones), compresses by emergence. Intentions across timescales — pscale 2 might be a life purpose, pscale 0 an immediate task.",
-        "4": "Relationships: arbitrary digits (one per entity), relational mapping, grows through encounter, compresses by emergence. Each digit at pscale 0 is an entity. Depth encodes familiarity.",
-        "5": "Spatial coordinates: labeling digits, containment mapping, defined toward zero (from cosmos to room). Digits distinguish locations. X~ reveals adjacent spaces. Typically defined precisely to human coordination scales at pscale 0.",
-        "6": "Temporal coordinates: sequential digits, temporal mapping, grows in both directions (accumulation of events and deepening of moments), compresses by summary into epochs. Digits encode temporal order.",
-        "7": "Stash: sequential digits, accumulates away from zero. Notes, artifacts, observations — content the entity chose to record. Compresses by summary or emergence depending on what patterns appear."
-      }
-    },
-    "9": {
-      "_": "Evolution. The history and development of this block itself.",
-      "1": "v1. Created 17 February 2026 by David Pinto and Claude (Anthropic), in conversation. David provided the architectural vision from 25 years of Fulcrum framework research in social anthropology and mathematics. Claude provided technical implementation and search confirmation that no equivalent format exists.",
-      "2": "The format emerged from a sequence of simplifications: flat JSON, then nested JSON, then removal of dimension keys, then removal of prefix codes, then the discovery that pscale 0 carries the block's own operating instructions. Each step removed complexity. The touchstone is what remained.",
-      "3": "v2. Updated 18 February 2026. Added: rendition and living block distinction, sign convention, spindle as primary output, navigation meaning depends on mapping, tuning for pscale level definition, additive and multiplicative cross-block interaction, fundamentals and archetypes.",
-      "4": "v3. Corrected decimal from 1 to 0. The touchstone is a rendition block — its own rules require decimal 0 for all-decomposition content. The tree root is now pscale 0 directly, with no wrapper key. The block practices what it teaches.",
-      "5": "v4. Updated 19 February 2026. Added: Practice section (0.3) — how blocks serve minds, starting with editable rendition. Existing sections renumbered (Navigation 0.3→0.4, Growth 0.4→0.5, Connection 0.5→0.6, Tuning 0.6→0.7, Fundamentals 0.7→0.8, Evolution 0.8→0.9). This is the operational touchstone — speculative structures (resonance mapping, density compression, standing wave, topological combination) live in touchstone-full and touchstone-experimental.",
-      "6": "This is part of the Xstream project — a coordination platform for collective narrative, and the Hermitcrab project — persistent LLM instances with structured knowledge. The pscale JSON block format is intended to be open and freely usable by anyone."
+      "_": "Navigation practice is the discipline of choosing which mode to reach for and when. The core principle is aperture-first: start broad with a bare-zero or dir call, narrow deliberately with spindles, and check breadth with ring when the depth feels incomplete.",
+      "1": "Every BSP call has a token cost proportional to what it returns. A dir loads the full tree; a deep spindle loads every level it passes through; a ring loads all siblings. The trade between resolution and context budget is the fundamental navigation decision.",
+      "2": "Named compounds combine primitives: a bulb is a spindle plus a ring at the landing point (vertical context plus lateral breadth in two calls). A dashboard is a disc on a temporal block at a given pscale. These are recipes, not additional modes — they emerge from practice."
     }
+  },
+  "3": {
+    "_": "To operate on any pscale block, implement a walk function that accepts a block (a JSON object using underscore and digit keys), a number (the BSP address as a string or float), and optionally a mode string. The walk is the single core algorithm — every mode is a variation of how the walk's results are collected, filtered, or redirected. A complete implementation needs the walk, floor detection, and mode dispatch.",
+    "1": {
+      "_": "The core walk algorithm: parse the input number by splitting at the decimal point if present, discarding a single leading zero before the decimal (it is notation for a delineation block), and splitting the post-decimal portion into individual digit characters. Initialise an empty spindle array and set the current node to the block's root object. For each digit in the sequence: if digit is '0', look up key '_'; otherwise look up the key matching that digit character. If the key exists and the value is an object, collect its '_' value into the spindle array and set the current node to this object. If the value is a string, collect it as the final entry and terminate. If the key does not exist, mark the creative frontier and terminate.",
+      "1": "Handle the root specially: before walking any digits, if the root object has a '_' key, collect its value as the first spindle entry. The root underscore is always the first element in any spindle because it provides the block-level orientation that contextualises everything deeper.",
+      "2": "For accumulation numbers (floor > 1), digits before the decimal walk the upper levels of the tree that were created by supernesting. The walk is identical in mechanics — the decimal point affects pscale labelling, not traversal. The same function handles both delineation (0.x) and accumulation (xx.x) numbers without branching.",
+      "3": "Return the spindle array as the default result. Each element is a string of underscore text at successive depths, ordered from root (index 0) to terminal (last index). The array length equals the number of tree levels successfully traversed plus one for the root."
+    },
+    "2": {
+      "_": "Floor detection: start at the root object, follow the underscore chain — if root['_'] is an object, step into it and check its ['_'], repeating until you reach a string. Count the steps. That count is the floor depth. Run this once per block and cache the result, because the floor does not change unless the block supernests.",
+      "1": "Use the floor to compute pscale positions: a node at tree depth d has pscale equal to (floor minus d minus 1), where depth 0 is the root level. This lets you label spindle entries with their pscale values and implement point mode (extract content at a specific pscale) and disc mode (collect all nodes at a specific depth).",
+      "2": "For rendition blocks (floor 1), the computation simplifies: pscale 0 is the root, pscale -1 is depth 1, pscale -2 is depth 2, and so on. The minus sign indicates decomposition below the decimal point — finer detail than the block's root resolution."
+    },
+    "3": {
+      "_": "Mode dispatch after the walk completes: spindle returns the collected array directly. Ring returns siblings of the terminal node — find the parent (the node one step before terminal in the walk), collect all its digit keys and their underscore texts, excluding the key that was walked to. Dir returns the full block tree as-is for complete survey, or if a number was provided, returns the subtree at the walk's terminal node. Point uses the floor calculation to extract content at a specific pscale depth. Disc ignores the number and recursively walks the entire tree collecting every node at the target depth.",
+      "1": "Ring implementation: during the walk, track the parent node (the node before the last step). After the walk, iterate the parent's keys, skip '_' and the terminal digit, and collect the value at each remaining digit key — if the value is a string return it directly, if an object return its '_' value.",
+      "2": "Disc implementation: write a recursive traversal starting at the root with depth counter 0. At each node, if the current depth equals the target depth, collect the node's content and its address (the path of digits walked to reach it). Otherwise, for each digit key 1–9 that exists, recurse with depth incremented by one. Return the flat collection of all matches."
+    }
+  },
+  "4": {
+    "_": "This block is a pscale JSON block describing pscale JSON blocks — its structure demonstrates every property it describes. Address 0.1 is the format described in the format. Address 0.2 is BSP navigation described in a BSP-navigable structure. Address 0.3 is the implementation specification that, when read as a spindle, provides enough operational detail for an LLM to build the function that would read this very spindle. The self-referential property is the verification mechanism: if a spindle through this block does not produce coherent, self-contextualising content, the block has failed at what it describes.",
+    "1": "This block is a rendition block — Form 1, floor 1, all addresses begin with 0. Every underscore describes its own group. Digits are editorial labels, not sequential entries. It will never supernest because it is a specification, not a living accumulator. Its structure is fixed by design: the format it describes is the format it uses, and changes to the specification change the example simultaneously.",
+    "2": "Every reader of this block is simultaneously a user and an auditor. Reading the block exercises the format and navigation it teaches. A spindle that delivers incoherent narrowing is both a broken explanation and a structural failure visible in the same moment — the medium and the message cannot diverge because they are the same object."
+  },
+  "5": {
+    "_": "Touchstone — the lean foundational reference for pure-form pscale JSON blocks. Version 1.1, March 2026. Authored by David Pinto with Claude Code and Claude.ai. The minimum viable ignition of operational understanding in any LLM context window.",
+    "1": "Pure form means this block contains only underscore keys, digit keys 1–9, and curly brackets — no tuning field, no tree wrapper, no skeleton, no mask. The floor is derived from the underscore chain depth. Any implementation that can walk this structure can walk any pure-form pscale block.",
+    "2": "Designed to be included in an LLM context window as a self-unpacking operational specification: one block that teaches the format, demonstrates it, and provides enough implementation detail for the reader to build its own BSP tools. The companion blocks pscale-guidelines and pscale-design carry the fuller treatments — craft, philosophy, design ethos, and the deeper implications of semantic addressing for LLM cognition."
   }
 }
